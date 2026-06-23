@@ -1,0 +1,30 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "EVN ePoint login",
+        "description": "Enter the phone number and password of your EVN ePoint app account. An OTP will be sent via SMS.",
+        "data": {
+          "username": "Phone number",
+          "password": "Password"
+        }
+      },
+      "otp": {
+        "title": "Enter OTP",
+        "description": "Enter the OTP code just sent via SMS to your phone.",
+        "data": {
+          "otp": "OTP code"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Wrong phone number or password.",
+      "invalid_otp": "OTP is incorrect or expired.",
+      "otp_send_failed": "Could not send OTP, please try again.",
+      "cannot_connect": "Cannot connect to the EVN ePoint server."
+    },
+    "abort": {
+      "already_configured": "This account is already configured."
+    }
+  }
+}

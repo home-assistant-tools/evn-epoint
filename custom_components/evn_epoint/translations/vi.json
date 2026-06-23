@@ -1,0 +1,30 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Đăng nhập EVN ePoint",
+        "description": "Nhập số điện thoại và mật khẩu tài khoản trên app EVN ePoint. Sau khi gửi, hệ thống sẽ gửi mã OTP qua SMS.",
+        "data": {
+          "username": "Số điện thoại",
+          "password": "Mật khẩu"
+        }
+      },
+      "otp": {
+        "title": "Nhập mã OTP",
+        "description": "Nhập mã OTP vừa được gửi qua SMS tới số điện thoại của bạn.",
+        "data": {
+          "otp": "Mã OTP"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Sai số điện thoại hoặc mật khẩu.",
+      "invalid_otp": "Mã OTP không đúng hoặc đã hết hạn.",
+      "otp_send_failed": "Không gửi được OTP, vui lòng thử lại.",
+      "cannot_connect": "Không kết nối được máy chủ EVN ePoint."
+    },
+    "abort": {
+      "already_configured": "Tài khoản này đã được thêm."
+    }
+  }
+}

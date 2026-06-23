@@ -49,7 +49,26 @@ Copy thư mục `custom_components/evn_epoint` vào `<config>/custom_components/
 
 ## 📊 Biểu đồ (ApexCharts Card)
 
-Cài `apexcharts-card` qua HACS → Frontend. Thay `sensor.tieu_thu_hom_nay` / `sensor.tieu_thu_thang_nay_tam_tinh` bằng entity thực tế của bạn.
+Cài `apexcharts-card` qua HACS → Frontend.
+
+### ⚠️ Tìm đúng Entity ID trước khi dùng
+
+Các ví dụ dưới đây dùng entity ID **mẫu** như `sensor.tieu_thu_hom_nay`. Trên thực tế, entity ID được HA tự tạo từ **tên hợp đồng + mã khách hàng**, nên sẽ có dạng:
+
+```
+sensor.<ten_hop_dong>_<ma_khach_hang>_tieu_thu_hom_nay
+```
+
+Ví dụ: `sensor.nguyen_van_a_pb12345678_tieu_thu_hom_nay`
+
+**Cách tìm entity ID thực tế của bạn:**
+
+- **Cách 1:** Vào **Cài đặt → Thiết bị & Dịch vụ → EVN ePoint** → click vào thiết bị → click vào tên sensor → copy *Entity ID* hiển thị trong dialog.
+- **Cách 2:** Vào **Developer Tools → States** → tìm kiếm `tieu_thu` → entity ID hiện trong cột đầu tiên.
+
+Sau khi có entity ID đúng, thay vào phần `entity:` trong các đoạn YAML bên dưới.
+
+---
 
 **Tiêu thụ theo ngày:**
 ```yaml

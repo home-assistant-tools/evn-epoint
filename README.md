@@ -82,15 +82,6 @@ series:
 
 ---
 
-## 🔧 Ghi chú kỹ thuật
-
-- API: `https://api.evnpoint.com/20984/gup2start/rest/` — REST + Bearer token (không ký HMAC).
-- Đăng nhập: `iam/v2/authentication/login` (password = `sha256`), thiết bị mới → gửi OTP qua `otp/sendWithActionWithoutToken`, xác thực qua `otp/verifyOtpWithActionWithoutToken`.
-- Dữ liệu điện: `etracker/contracts/withAddress`, `etracker/consumption/byDate|byMonth`, `etracker/v2/consumption/info`, `etracker/bills`.
-- Mặc định cập nhật **mỗi 2 giờ** (dữ liệu EVN đổi ~1 lần/ngày).
-
----
-
 ## ⚠️ Miễn trừ
 
 Dự án không chính thức, không liên kết với EVN/iCom. Dùng tài khoản EVN ePoint của chính bạn, tự chịu trách nhiệm. Tài khoản chỉ đăng nhập được trên một thiết bị tại một thời điểm — nếu HA đăng nhập, app trên điện thoại có thể bị đăng xuất (và ngược lại).
